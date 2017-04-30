@@ -109,9 +109,45 @@
     </script>
 
 
+    <script>
+      context = document.getElementById('arrows-iso-vert').getContext("2d");
+      context.beginPath();
+    canvas_arrow_two_heads(context, 250, 350, 250, 150);
+    context.lineWidth = 2;
+      context.stroke();
+    </script>
 
+    <script>
+      var canvas = document.getElementById('fiber');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(590, 170);
+      context.bezierCurveTo(400, 300, 365, 80, 378, 65);
+      context.lineWidth = 10;
+
+      // line color
+      context.strokeStyle = 'yellow';
+      context.stroke();
+    </script>
+
+    <script>
+      var canvas = document.getElementById('zoom-box');
+      var context = canvas.getContext('2d');
+
+      context.beginPath(300, 140);
+      context.moveTo(300, 140);
+      context.lineTo(300, 230);
+      context.lineTo(380, 230);
+      context.lineTo(380, 140);
+      context.lineTo(300, 140);
+      context.lineWidth = 2;
+
+      // line color
+      context.strokeStyle = 'white';
+      context.stroke();
+    </script>
 
 
 </body>
-
 </html>
