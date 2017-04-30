@@ -166,38 +166,41 @@ style: middle, center
     <small>Mean diffusivity</small>
   </div>
 
---
-
   <div style="position: absolute; left: -8px;">
     <img src="images/md-scale.png" height="40" style="background:none; border:none; box-shadow:none;">
   </div>
   <div style="position: absolute; left: 222px; top:350px; ">
     <img src="images/md-units.png" height="50" style="background:none; border:none; box-shadow:none;">
   </div>
+  </div>
 
 --
-  </div>
-  <div class="fragment fade-in" style="position: absolute; left: 16px;">
-  <div style="position: absolute; left: 320px; top:320px; ">
-    <video width="200" autoplay loop>
+<div class="fragment fade-in" style="position: absolute; left: 15px;">
+
+  <div style="position: absolute; left: 330px; top:340px">
+    <video width="120" autoplay loop>
     <source src="video/diffusion-fa-251.mov">
   </div>
-  <img src="images/tensor-stats2.png" height="340" style="background:none; border:none; box-shadow:none;" >
 
+  <div>
+  <img src="images/tensor-stats2.png" height="340" style="background:none; border:none; box-shadow:none;" >
+  </div>
 
   <div style="position: absolute; left: 350px; top: 420px;">
     <small>Fractional anisotropy</small>
   </div>
+
+</div>
+
 --
 
-  </div>
-  <div class="fragment fade-in" style="position: absolute; left: 0px;">
-  <img src="images/tensor-stats3.png" height="400" style="background:none; border:none; box-shadow:none;" >
+  <div class="fragment fade-in" style="position: absolute; left: 15px;">
+  <img src="images/tensor-stats3.png" height="340" style="background:none; border:none; box-shadow:none;" >
   <div style="position: absolute; left: 600px; top: 420px;">
     <small>Principal diffusion direction</small>
   </div>
-  <div style="position: absolute; left: 700px; top:432px; ">
-    <img src="images/axes.png" height="100" style="background:none; border:none; box-shadow:none;">
+  <div style="position: absolute; left: 650px; top:345px; ">
+    <img src="images/axes.png" height="80" style="background:none; border:none; box-shadow:none;">
   </div>
   </div>
   </section>
@@ -220,13 +223,14 @@ style: middle, center
 
 ---
 
-<div style="position: absolute;">
+<div style="position: absolute; left: 10px; top:70px;">
 <img src="images/d2t-bkgrnd.png" style="background:none; border:none; box-shadow:none;" height="505", width="766">
 </div>
 
 --
 
-<div style="position: absolute; left: 102px; top:20px;"><img src="images/tensor_ellipsoids.png" style="background:none; border:none; box-shadow:none; opacity:0.4; filter:alpha(opacity=40);">
+<div style="position: absolute; left: 102px; top:20px;">
+<img src="images/tensor_ellipsoids.png" style="background:none; border:none; box-shadow:none; opacity:0.4; filter:alpha(opacity=40);">
 </div>
 
 
