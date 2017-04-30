@@ -20,11 +20,67 @@ layout: true
 
 ---
 
+<image src="./images/vanessen.png" style="background:none; border:none; box-shadow:none;" height="600">
+
+<div align="right">
+<a href="https://github.com/ericmjonas/vanessen"><small>Felleman & Van Essen, 1991</small></a>
+</div>
+---
+
+### White matter: the brain's super-highways
+
+<div style="position: absolute; top: 150px; left: 20px;" >
+  <image src="./images/optic-radiation-postmortem.png" style="background:none; border:none; box-shadow:none;" height="400">
+</div>
+
+--
+
+<div style="position: absolute; top: 150px; left: 350px;" >
+  <image src="./images/nerve-fiber.png" style="background:none; border:none; box-shadow:none;" height="400">
+</div>
+
+---
+
+### Why do we study the white matter?
+
+--
+
+- Computational models of brain structure and function
+
+--
+
+- Cognitive role: how does variance in a behavior reflect variance in biological features
+
+--
+
+- Clinical relevance
+
+--
+
+---
+
+
 # Isotropic diffusion
 
+<div>
 <video width="600" autoplay loop>
   <source src="./video/diffusion-isotropic.mp4">
 </video>
+</div>
+
+
+--
+
+<div style="position: absolute">
+<canvas id="arrows-iso-horiz" width="1000" height="1000">
+</canvas>
+</div>
+
+<div style="position: absolute">
+<canvas id="arrows-iso-vert" width="1000" height="1000">
+</canvas>
+</div>
+
 
 ---
 
@@ -37,20 +93,10 @@ layout: true
 
 ---
 
-### Diffusion MRI
+# Diffusion MRI
 
 <video preload="auto" width="70%" height="auto" data-setup="{}" autoplay loop ><source src="./video/dMRI-signal-movie.mp4"/></video>
 
-
---
-
-- Bullet 1
-
---
-
-- Bullet 2
-
----
 
 ---
 class: center

@@ -36,6 +36,35 @@
 <style>
 .theBlackBackground {background-color:#000;color: white;}
 </style>
+
+<!-- Draw arrows -->
+<script>
+    function canvas_arrow_two_heads(context, fromx, fromy, tox, toy){
+    var headlen = 10;   // length of head in pixels
+    var angle = Math.atan2(toy-fromy,tox-fromx);
+    context.moveTo(fromx, fromy);
+    context.lineTo(fromx+headlen*Math.cos(angle+Math.PI/6),fromy+headlen*Math.sin(angle+Math.PI/6));
+    context.moveTo(fromx, fromy);
+    context.lineTo(fromx+headlen*Math.cos(angle-Math.PI/6),fromy+headlen*Math.sin(angle-Math.PI/6));
+  context.moveTo(fromx, fromy);
+    context.lineTo(tox, toy);
+    context.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),toy-headlen*Math.sin(angle-Math.PI/6));
+    context.moveTo(tox, toy);
+    context.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),toy-headlen*Math.sin(angle+Math.PI/6));}
+    </script>
+
+<script>
+    function canvas_arrow(context, fromx, fromy, tox, toy){
+    var headlen = 10;   // length of head in pixels
+    var angle = Math.atan2(toy-fromy,tox-fromx);
+    context.moveTo(fromx, fromy);
+    context.lineTo(tox, toy);
+    context.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),toy-headlen*Math.sin(angle-Math.PI/6));
+    context.moveTo(tox, toy);
+    context.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),toy-headlen*Math.sin(angle+Math.PI/6));}
+</script>
+
+
 </head>
 
 <body>
@@ -69,33 +98,17 @@
 
     MathJax.Hub.Configured();
   </script>
-  
-  <!-- Draw arrows -->
-  <script>
-      function canvas_arrow_two_heads(context, fromx, fromy, tox, toy){
-      var headlen = 10;   // length of head in pixels
-      var angle = Math.atan2(toy-fromy,tox-fromx);
-      context.moveTo(fromx, fromy);
-      context.lineTo(fromx+headlen*Math.cos(angle+Math.PI/6),fromy+headlen*Math.sin(angle+Math.PI/6));
-      context.moveTo(fromx, fromy);
-      context.lineTo(fromx+headlen*Math.cos(angle-Math.PI/6),fromy+headlen*Math.sin(angle-Math.PI/6));
-    context.moveTo(fromx, fromy);
-      context.lineTo(tox, toy);
-      context.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),toy-headlen*Math.sin(angle-Math.PI/6));
-      context.moveTo(tox, toy);
-      context.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),toy-headlen*Math.sin(angle+Math.PI/6));}
-      </script>
 
-  <script>
-      function canvas_arrow(context, fromx, fromy, tox, toy){
-      var headlen = 10;   // length of head in pixels
-      var angle = Math.atan2(toy-fromy,tox-fromx);
-      context.moveTo(fromx, fromy);
-      context.lineTo(tox, toy);
-      context.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),toy-headlen*Math.sin(angle-Math.PI/6));
-      context.moveTo(tox, toy);
-      context.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),toy-headlen*Math.sin(angle+Math.PI/6));}
-  </script>
+
+    <script>
+      context = document.getElementById('arrows-iso-horiz').getContext("2d");
+      context.beginPath();
+    canvas_arrow_two_heads(context, 390, 450, 590, 450);
+      context.lineWidth = 2;
+      context.stroke();
+    </script>
+
+
 
 
 
