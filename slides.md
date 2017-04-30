@@ -156,7 +156,7 @@ style: middle, center
 
 ---
 
-# Diffusion statistics
+# Diffusion indices
 
 --
 
