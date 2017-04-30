@@ -3,11 +3,13 @@ class: center, middle
 
 <img src="images/escience.png" width=350>
 
-# TITLE
+# IN-VIVO VALIDATION
+###of
+## Diffusion MRI and tractography
 ## Ariel Rokem
 ### The University of Washington eScience Institute
 
-<small>Follow along at: <a href="https://arokem.github.io/talk-template">https://arokem.github.io/talk-template</small>
+<small>Follow along at: <a href="https://arokem.github.io/2017-05-04-diffusion-stats">https://arokem.github.io/2017-05-04-diffusion-stats</small>
 
 ---
 
@@ -18,7 +20,27 @@ layout: true
 
 ---
 
-# Slide title
+# Isotropic diffusion
+
+<video width="600" autoplay loop>
+  <source src="./video/diffusion-isotropic.mp4">
+</video>
+
+---
+
+# Anisotropic diffusion
+
+<video width="600" autoplay loop>
+  <source src="./video/diffusion-anisotropic.mp4">
+</video>
+
+
+---
+
+### Diffusion MRI
+
+<video preload="auto" width="70%" height="auto" data-setup="{}" autoplay loop ><source src="./video/dMRI-signal-movie.mp4"/></video>
+
 
 --
 
