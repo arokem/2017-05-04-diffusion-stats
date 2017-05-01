@@ -223,13 +223,13 @@ style: middle, center
 
 ---
 
-<div style="position: absolute; left: 10px; top:70px;">
-<img src="images/d2t-bkgrnd.png" style="background:none; border:none; box-shadow:none;" height="505", width="766">
+<div style="position: absolute; left: 10px; top:65px;">
+<img src="images/d2t-bkgrnd.png" style="background:none; border:none; box-shadow:none;" height="525", width="766">
 </div>
 
 --
 
-<div style="position: absolute; left: 102px; top:20px;">
+<div style="position: absolute; left: 102px; top:20px; height="400px;">
 <img src="images/tensor_ellipsoids.png" style="background:none; border:none; box-shadow:none; opacity:0.4; filter:alpha(opacity=40);">
 </div>
 
@@ -242,7 +242,17 @@ style: middle, center
 
 ---
 
+# Tractography
 
+<video preload="auto" width="60%" height="auto" data-setup="{}" autoplay loop ><source src="video/cc_tube_movie.mov"/> </video>
+
+---
+
+# An alternative to the tensor: sparse fascicle models
+
+
+
+---
 
 layout: center, middle
 
@@ -250,8 +260,145 @@ layout: center, middle
 
 ---
 
-## Model selection with cross-validation
+### Diffusion MRI: the challenge of validation
 
+<div style="position: absolute; left: 10px; top: 250px;">
+Algorithm 1
+</div>
+
+<div style="position: absolute; left: 10px; top: 450px;">
+Algorithm 2
+</div>
+
+<div class="fragment" style="position: absolute; left: 150px; top:150px;">
+<img src="images/two-algs.png" style="background:none; border:none; box-shadow:none;" height="400px;">
+
+</div>
+<div class="fragment" style="position: absolute; left: 500px; top:90px;">
+<img src="images/two-algs-conn.png" style="background:none; border:none; box-shadow:none;" height="500px;">
+</div>
+
+<div class="fragment" style="position: absolute; left: 650px; top: 570px;">
+<a href="http://arokem.org/publications/papers/Pestilli2014LiFE.pdf"><small>Pestilli et al., 2014</small></a>
+</div>
+
+---
+
+
+<section>
+<div style="position: absolute; left: 40px; top: 50px;">
+  <medium>Measurement #1</medium>
+</div>
+<div style="position: absolute; left: 10px; top: 100px;">
+  <img src="images/sig1.png" height="500px;"" style="background:none; border:none; box-shadow:none;">
+</div>
+
+--
+
+<div class="fragment">
+<div style="position: absolute; left: 650px; top: 100px;">
+  <img src="images/sig2.png" style="background:none; border:none; box-shadow:none;">
+</div>
+
+<div style="position: absolute; left: 700px; top: 50px;">
+  <medium>Measurement #2</medium>
+</div>
+
+--
+
+</div>
+<div class = "fragment" style="position: absolute">
+  <canvas id="arrow-test-retest" width="1000" height="1000">
+  </canvas>
+</div>
+
+<div class="fragment" style="position:absolute; left: 350px; top:100px">
+    Test-retest reliability
+</div>
+
+--
+
+<div class = "fragment" style="position: absolute">
+  <canvas id="arrow-cv1" width="1000" height="1000">
+  </canvas>
+</div>
+
+<div class="fragment " style="position:absolute; left: 430px; top:395px">
+    Model
+</div>
+
+--
+
+<div class = "fragment" style="position: absolute">
+  <canvas id="arrow-cv2" width="1000" height="1000">
+  </canvas>
+</div>
+
+--
+
+<div class="fragment" style="position:absolute; left: 385px; top:450px">
+  Cross-validation
+</div>
+
+---
+
+### An aside: is R-squared useless?
+
+---
+
+<div>
+  <img src="images/rrmse1.png" style="background:none; border:none; box-shadow:none;">
+</div>
+
+<div class="fragment">
+  <img src="images/rrmse2.png" style="background:none; border:none; box-shadow:none;">
+</div>
+
+<div style="position: absolute; left: 500px; top: 650px;" >
+      <small>Rokem et al. (2015)</small>
+    </div>
+
+---
+
+<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="595">
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+---
+
+<div style="position:absolute; 	left: 300px; top: 40px;">
+          <img src="images/droppedImage-small-147.png" style="background:none; border:none; box-shadow:none;" height="400">
+</div>
+<div class="fragment"style="position:absolute; 	left: 70px; top: 80px;">
+Corpus callosum
+</div>
+
+<div class="fragment"style="position:absolute; 	left: 350px; top: -10px;">
+Corticospinal tract
+</div>
+
+<div class="fragment"style="position:absolute; 	left: -80px; top: 240px;">
+Superior <br>longitudinal fasciculus
+</div>
+
+---
+
+<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="595">
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+---
+
+<div style="position:absolute; 	left: 86px; top: 115px;">
+<img src="images/rRMSE_CSO_SSD4k-355.png" style="background:none; border:none; box-shadow:none;" height="470" width="620">
+</div>
+
+---
+
+
+## Model selection with cross-validation
 
 <div style="position: absolute; left: 500px; top: 650px;" >
   <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0123272"><small>Rokem et al. (2015)</a></small>
