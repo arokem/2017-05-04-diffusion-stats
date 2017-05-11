@@ -118,6 +118,29 @@ Many neurological and psychiatric disorders affect white matter biology
 
 ---
 
+# Diffusion MRI
+
+<img src="images/journal.pone.0123272.g001.PNG" height="250" style="background:none; border:none; box-shadow:none;">
+
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+---
+
+# Diffusion MRI
+
+<img src="images/journal.pone.0123272.g002.PNG" height="350" style="background:none; border:none; box-shadow:none;">
+
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+
+
+
+---
+
 layout: false
 
 ## Models of the white matter
@@ -207,8 +230,6 @@ style: middle, center
 
 ---
 
-
-
 # From diffusion to tracks
 
 <div style="position: absolute; left: 210px;">
@@ -248,7 +269,22 @@ style: middle, center
 
 ---
 
-# An alternative to the tensor: sparse fascicle models
+## A major assumption
+
+Well-aligned nerve fibers within the voxel
+
+
+---
+
+## An alternative to the tensor: sparse fascicle models
+
+<div style="position: absolute; top: 150px;">
+  <img src="images/sfm-equation.png" height="100px;"" style="background:none; border:none; box-shadow:none;">
+</div>
+
+<div style="position: absolute; top: 250px;">
+  <img src="images/beta_larger_zero.png" height="20px;"" style="background:none; border:none; box-shadow:none;">
+</div>
 
 
 
@@ -342,66 +378,142 @@ Algorithm 2
 
 ---
 
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+--
+
+<div style="position: absolute; left: 10px; top: 150px;">
+  <img src="images/test-retest.png" height="300px;"" style="background:none; border:none; box-shadow:none;">
+</div>
+
+--
+
+<div style="position: absolute; left: 400px; top: 150px;">
+  <img src="images/test-predict.png" height="300px;"" style="background:none; border:none; box-shadow:none;">
+</div>
+
+---
+
 ### An aside: is R-squared useless?
 
+--
+
+Coefficient of determination:
+
+$$R^{2} =\frac{SS_e}{SS_t}$$
+
+--
+
+$$R^{2} =\frac{\sum{(y - \hat{y})^2}}{\sum{(y - \bar{y})^2}}$$
+
+--
+
+The [problems](http://data.library.virginia.edu/is-r-squared-useless/):
+
+--
+
+- Even when the model is correct, COD depends on the variance of y
+
+--
+
+- COD can be very close to 1, even for the wrong model
+
+--
+
+- COD does not track prediction error.
+
+--
+
+- Transformations of Y will affect COD.
+
 ---
 
-<div>
-  <img src="images/rrmse1.png" style="background:none; border:none; box-shadow:none;">
-</div>
+# Relative RMSE
 
-<div class="fragment">
-  <img src="images/rrmse2.png" style="background:none; border:none; box-shadow:none;">
-</div>
+--
 
-<div style="position: absolute; left: 500px; top: 650px;" >
-      <small>Rokem et al. (2015)</small>
-    </div>
+$$rRMSE =\frac{RMSE(model)}{RMSE(test-retest)}$$
+
+--
+
+### Upper bound
+
+$$rRMSE < 1$$
+
+is a good model
+
+--
+
+### Lower bound
+
+
+$$rRMSE = \frac{1}{\sqrt{2}}$$
+
+is a *correct* model
 
 ---
 
-<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="595">
+### DTI is a good model
+
+
+<img src="images/rrmse-distribution.png" style="background:none; border:none; box-shadow:none;" height="500">
 <div style="position: absolute; left: 500px; top: 650px;" >
   <small>Rokem et al. (2015)</small>
 </div>
 
 ---
 
-<div style="position:absolute; 	left: 300px; top: 40px;">
-          <img src="images/droppedImage-small-147.png" style="background:none; border:none; box-shadow:none;" height="400">
-</div>
-<div class="fragment"style="position:absolute; 	left: 70px; top: 80px;">
-Corpus callosum
+### But it has some issues
+
+<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="500">
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
 </div>
 
-<div class="fragment"style="position:absolute; 	left: 350px; top: -10px;">
+---
+
+<div style="position:absolute; 	left: 300px; top: 200px;">
+          <img src="images/droppedImage-small-147.png" style="background:none; border:none; box-shadow:none;" height="400">
+</div>
+
+<div class="fragment"style="position:absolute; 	left: 350px; top: 150px;">
 Corticospinal tract
 </div>
 
-<div class="fragment"style="position:absolute; 	left: -80px; top: 240px;">
+<div class="fragment"style="position:absolute; 	left: 80px; top: 400px;">
 Superior <br>longitudinal fasciculus
+</div>
+
+<div class="fragment"style="position:absolute; 	left: 200px; top: 240px;">
+Corpus callosum
 </div>
 
 ---
 
-<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="595">
+### DTI has some issues
+
+<img src="images/rRMSE-tensor.png" style="background:none; border:none; box-shadow:none;" height="500">
 <div style="position: absolute; left: 500px; top: 650px;" >
   <small>Rokem et al. (2015)</small>
 </div>
 
 ---
 
-<div style="position:absolute; 	left: 86px; top: 115px;">
-<img src="images/rRMSE_CSO_SSD4k-355.png" style="background:none; border:none; box-shadow:none;" height="470" width="620">
+### SFM fixes these issues
+
+<img src="images/rRMSE-sfm.png" style="background:none; border:none; box-shadow:none;" height="500">
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
 </div>
 
 ---
 
-
-## Model selection with cross-validation
+## Are we done yet?
 
 <div style="position: absolute; left: 500px; top: 650px;" >
-  <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0123272"><small>Rokem et al. (2015)</a></small>
+  <small>Rokem et al. (2015)</small>
 </div>
 
 <image src="images/rokem2015-fig6.png" height="25%">
@@ -412,9 +524,21 @@ layout: true
 
 ---
 
+## What about reproducibility?
+
+<div style="position: absolute; top: 10px; left: 20px;" >
+  <image src="images/gorgolewski-poldrack-three-pillars.png" style="background:none; border:none; box-shadow:none;" height="600">
+</div>
+
+---
+
+## Reproducibility in practice
+
 <div style="position: absolute; top: 10px; left: 20px;" >
   <image src="images/arokem.png" style="background:none; border:none; box-shadow:none;" height="600">
 </div>
+
+[https://www.practicereproducibleresearch.org/](https://www.practicereproducibleresearch.org/)
 
 ---
 
