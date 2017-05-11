@@ -510,6 +510,15 @@ Corpus callosum
 
 ---
 
+### SFM fixes these issues
+
+<img src="images/journal.pone.0123272.g005.PNG" style="background:none; border:none; box-shadow:none;" height="300">
+<div style="position: absolute; left: 500px; top: 650px;" >
+  <small>Rokem et al. (2015)</small>
+</div>
+
+---
+
 ## Are we done yet?
 
 <div style="position: absolute; left: 500px; top: 650px;" >
@@ -526,9 +535,10 @@ layout: true
 
 ## What about reproducibility?
 
-<div style="position: absolute; top: 10px; left: 20px;" >
-  <image src="images/gorgolewski-poldrack-three-pillars.png" style="background:none; border:none; box-shadow:none;" height="600">
-</div>
+  <image src="images/gorgolewski-poldrack-three-pillars.png" style="background:none; border:none; box-shadow:none;" height="400">
+  <div style="position: absolute; left: 500px; top: 650px;" >
+    <small>Gorgolewski and Poldrack (2016)</small>
+  </div>
 
 ---
 
